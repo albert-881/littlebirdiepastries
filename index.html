@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responsive Website</title>
   <script src="https://unpkg.com/feather-icons"></script> <!-- Feather icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+
+
   <style>
     /* Reset basic styles */
     * {
@@ -60,13 +64,41 @@
       width: 150px;  /* Adjust logo size for mobile */
       height: auto;
     }
-
     .circle {
-      width: 100px;  /* Adjust the size of the circle for mobile */
-      height: 40px;
-      background-color: #Efe8b8;
-      border-radius: 50%; /* Oval shape */
-    }
+    width: 110px;
+    height: 50px;
+    background-color: #Efe8b8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem; /* relative to screen size */
+    color: #795F4C;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap; /* prevents wrapping */
+}
+.bottom-circle {
+  margin-top: 40px; /* space from frames */
+  width: 60vw;
+  height: 150px;
+  background-color: #Efe8b8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 2rem;
+  color: #795F4C;
+  text-align: center;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
 
     /* Awning Section with Image */
     .awning {
@@ -108,6 +140,20 @@
     gap: 60px;
     
 }
+.frame-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.arch-text {
+    margin-top: 10px;
+    font-size: 1.5rem; /* You can make it slightly bigger for Dancing Script */
+    font-weight: bold; /* Dancing Script looks best at normal weight */
+    color: #795F4C;
+    font-family: 'Dancing Script', cursive;
+}
+
+
     /* Mobile styles */
     @media (max-width: 768px) {
       
@@ -117,12 +163,20 @@
       }
 
       .circle {
-        width: 80px; /* Adjust circle size for mobile */
-        height: 40px;
-      }
+    width: 90px;
+    height: 40px;
+    font-size: 1rem; /* shrink font slightly */
+  }
+  
+  .bottom-circle {
+    width: 80vw;
+    font-size: 1.3rem;
+    height: 120px;
+    letter-spacing: 1px;
+  }
 
       .logo img {
-        width: 120px; /* Adjust logo size further for mobile */
+        width: 150px; /* Adjust logo size further for mobile */
       }
 
       /* Adjust Awning height for smaller screens */
@@ -164,7 +218,7 @@
     <div class="logo">
       <img src="Order Now-2.png" alt="">
     </div>
-    <div class="circle"></div>
+    <div class="circle">Order Now</div>
   </div>
 
   <!-- Awning Section with Image -->
@@ -172,19 +226,33 @@
     <!-- Insert the image directly here -->
         <img src="Order Now-4.png" alt="Order Now Image">
     </div>
-<div class="frame-container">
+    <div class="frame-container">
+      <div class="frame-item">
+        <div class="arch-frame">
+            <img src="IMG_6869.jpg" alt="Arch framed picture" class="arch-image">
+        </div>
+        <div class="arch-text">cupcakes</div>
+      </div>
     
-
-    <div class="arch-frame">
-        <img src="your-image.jpg" alt="Arch framed picture" class="arch-image">
+      <div class="frame-item">
+        <div class="arch-frame">
+            <img src="IMG_6873.jpg" alt="Arch framed picture" class="arch-image">
+        </div>
+        <div class="arch-text">cookies</div>
+      </div>
+    
+      <div class="frame-item">
+        <div class="arch-frame">
+            <img src="IMG_6908.jpg" alt="Arch framed picture" class="arch-image">
+        </div>
+        <div class="arch-text">cakes</div>
+      </div>
     </div>
-    <div class="arch-frame">
-        <img src="your-image.jpg" alt="Arch framed picture" class="arch-image">
+    <div class="bottom-circle">
+      Wholesome & Delightful Pastries
     </div>
-    <div class="arch-frame">
-        <img src="your-image.jpg" alt="Arch framed picture" class="arch-image">
-    </div>
-</div>
+    
+  
   <script>
     feather.replace();
   </script>

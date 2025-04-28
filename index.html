@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Website</title>
+  <script src="https://unpkg.com/feather-icons"></script> <!-- Feather icons -->
+  <style>
+    /* Reset basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #FFF9ED;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 40px;
+      background-color: #E2B08B;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .banner-text {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* Top Section */
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hamburger-icon {
+      width: 100px;
+      height: 40px;
+      color: #E2B08B;
+    }
+
+    .logo img {
+      width: 150px;  /* Adjust logo size for mobile */
+      height: auto;
+    }
+
+    .circle {
+      width: 100px;  /* Adjust the size of the circle for mobile */
+      height: 40px;
+      background-color: #Efe8b8;
+      border-radius: 50%; /* Oval shape */
+    }
+
+    /* Awning Section with Image */
+    .awning {
+      width: 800px; /* Full width */
+      height: 200px; /* Default height for desktop */
+      margin: 0 auto; /* Center the awning horizontally */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .awning img {
+      width: 100%; /* Make the image responsive and cover the div */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure the image covers the div without distortion */
+    }
+
+    .arch-frame {
+    width: 150px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arch-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.frame-container{
+    display: flex;
+    margin-top: 50px;
+    gap: 60px;
+    
+}
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      
+
+      .hamburger-icon {
+        margin-bottom: 10px;
+      }
+
+      .circle {
+        width: 80px; /* Adjust circle size for mobile */
+        height: 40px;
+      }
+
+      .logo img {
+        width: 120px; /* Adjust logo size further for mobile */
+      }
+
+      /* Adjust Awning height for smaller screens */
+      .awning {
+        width: 450px; /* Slightly smaller width on mobile */
+        height: 200px; /* Adjust height for mobile screens */
+      }
+      .arch-frame {
+        width: 120px; /* Smaller size for mobile */
+        height: 130px; /* Adjust height proportionally */
+    }
+
+    .frame-container {
+        gap: 30px; /* Reduce gap between frames for smaller screens */
+    }
+    }
+
+    @media (max-width: 480px) {
+      .banner-text {
+        font-size: 12px;  /* Make banner text smaller on very small screens */
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-text">
+      Pre-Order Your Mother’s Day Pastry Boxes Today!
+    </div>
+  </div>
+
+  <!-- Top Section (Hamburger + Circle) -->
+  <div class="top-section">
+    <div class="hamburger-icon" data-feather="menu"></div>
+    <div class="logo">
+      <img src="Order Now-2.png" alt="">
+    </div>
+    <div class="circle"></div>
+  </div>
+
+  <!-- Awning Section with Image -->
+  <div class="awning">
+    <!-- Insert the image directly here -->
+        <img src="Order Now-4.png" alt="Order Now Image">
+    </div>
+<div class="frame-container">
+    
+
+    <div class="arch-frame">
+        <img src="your-image.jpg" alt="Arch framed picture" class="arch-image">
+    </div>
+    <div class="arch-frame">
+        <img src="your-image.jpg" alt="Arch framed picture" class="arch-image">
+    </div>
+    <div class="arch-frame">
+        <img src="your-image.jpg" alt="Arch framed picture" class="arch-image">
+    </div>
+</div>
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+</html>

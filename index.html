@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
 
-
   <style>
     /* Reset basic styles */
     * {
@@ -27,8 +26,41 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
+    /* Remove borders and other default styles from buttons */
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Optional: Add hover effect or other styles */
+button:hover {
+  background-color: #E2B08B; /* Example hover effect */
+  color: #fff;
+}
 
     /* Banner */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(1.1); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(1.3); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(70px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
     .banner {
       width: 100%;
       height: 40px;
@@ -38,6 +70,7 @@
       align-items: center;
       text-align: center;
       padding: 0 16px;
+      animation: fadeIn 1s ease-out forwards;
     }
 
     .banner-text {
@@ -58,47 +91,69 @@
       width: 100px;
       height: 40px;
       color: #E2B08B;
+      transition: transform 0.3s ease;
+    }
+
+    .hamburger-icon:hover {
+      transform: scale(1.2);
     }
 
     .logo img {
       width: 150px;  /* Adjust logo size for mobile */
       height: auto;
     }
-    .circle {
-    width: 110px;
-    height: 50px;
-    background-color: #Efe8b8;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 1.2rem; /* relative to screen size */
-    color: #795F4C;
-    text-align: center;
-    padding: 5px;
-    overflow: hidden;
-    white-space: nowrap; /* prevents wrapping */
-}
-.bottom-circle {
-  margin-top: 40px; /* space from frames */
-  width: 60vw;
-  height: 150px;
-  background-color: #Efe8b8;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Bodoni Moda', serif;
-  font-size: 2rem;
-  color: #795F4C;
-  text-align: center;
-  padding: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  letter-spacing: 2px;
-}
 
+    .circle {
+      width: 120px;
+      height: 50px;
+      background-color: #Efe8b8;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.2rem; /* relative to screen size */
+      color: #795F4C;
+      text-align: center;
+      padding: 5px;
+      overflow: hidden;
+      white-space: nowrap; /* prevents wrapping */
+      animation: popIn 1s ease forwards;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .circle:hover {
+      transform: scale(1.1);
+      background-color: #D9A77B;
+    }
+
+    .bottom-circle {
+      margin-top: 40px; /* space from frames */
+      width: 60vw;
+      height: 150px;
+      background-color: #Efe8b8;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Bodoni Moda', serif;
+      font-size: 2rem;
+      color: #795F4C;
+      text-align: center;
+      padding: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      animation: popIn 1s ease forwards;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .bottom-circle:hover {
+      transform: scale(1.1);
+      background-color: #D9A77B;
+    }
 
     /* Awning Section with Image */
     .awning {
@@ -114,66 +169,78 @@
       width: 100%; /* Make the image responsive and cover the div */
       height: auto; /* Maintain aspect ratio */
       object-fit: cover; /* Ensure the image covers the div without distortion */
+      animation: zoomIn 1.5s ease forwards;
     }
 
     .arch-frame {
-    width: 150px;
-    height: 160px;
-    background-color: #fff;
-    border-radius: 50% 50% 0 0;
-    overflow: hidden;
-    
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+      width: 150px;
+      height: 160px;
+      background-color: #fff;
+      border-radius: 50% 50% 0 0;
+      overflow: hidden;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: floatUp 1.5s ease forwards;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.arch-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.frame-container{
-    display: flex;
-    margin-top: 50px;
-    gap: 60px;
-    
-}
-.frame-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.arch-text {
-    margin-top: 10px;
-    font-size: 1.5rem; /* You can make it slightly bigger for Dancing Script */
-    font-weight: bold; /* Dancing Script looks best at normal weight */
-    color: #795F4C;
-    font-family: 'Dancing Script', cursive;
-}
+    .arch-frame:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
 
+    .arch-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .frame-container {
+      display: flex;
+      margin-top: 50px;
+      gap: 60px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .frame-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .arch-text {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #795F4C;
+      font-family: 'Dancing Script', cursive;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
 
     /* Mobile styles */
     @media (max-width: 768px) {
-      
-
       .hamburger-icon {
         margin-bottom: 10px;
       }
 
       .circle {
-    width: 90px;
-    height: 40px;
-    font-size: 1rem; /* shrink font slightly */
-  }
+        width: 100px;
+        height: 40px;
+        font-size: 1rem;
+      }
   
-  .bottom-circle {
-    width: 80vw;
-    font-size: 1.3rem;
-    height: 120px;
-    letter-spacing: 1px;
-  }
+      .bottom-circle {
+        width: 80vw;
+        font-size: 1.3rem;
+        height: 120px;
+        letter-spacing: 1px;
+      }
 
       .logo img {
         width: 150px; /* Adjust logo size further for mobile */
@@ -184,23 +251,23 @@
         width: 80%; /* Slightly smaller width on mobile */
         height: 200px; /* Adjust height for mobile screens */
       }
-      .arch-frame {
-        width: 20vw; /* Smaller size for mobile */
-        height: 110px; /* Adjust height proportionally */
-    }
 
-    .frame-container {
-        gap: 20px; /* Reduce gap between frames for smaller screens */
-        
-    }
+      .arch-frame {
+        width: 20vw;
+        height: 110px;
+      }
+
+      .frame-container {
+        gap: 20px;
+        margin-top: 0 ;
+      }
     }
 
     @media (max-width: 480px) {
       .banner-text {
-        font-size: 12px;  /* Make banner text smaller on very small screens */
+        font-size: 12px;
       }
     }
-
   </style>
 </head>
 <body>
@@ -218,40 +285,40 @@
     <div class="logo">
       <img src="Order Now-2.png" alt="">
     </div>
-    <div class="circle">Order Now</div>
+    <button class="circle">Order Now</button>
   </div>
 
   <!-- Awning Section with Image -->
   <div class="awning">
-    <!-- Insert the image directly here -->
-        <img src="Order Now-4.png" alt="Order Now Image">
+    <img src="Order Now-4.png" alt="Order Now Image">
+  </div>
+  
+  <!-- Frame Section -->
+  <div class="frame-container">
+    <div class="frame-item">
+      <button class="arch-frame">
+        <img src="IMG_6869.jpg" alt="Arch framed picture" class="arch-image">
+      </button>
+      <div class="arch-text">cupcakes</div>
     </div>
-    <div class="frame-container">
-      <div class="frame-item">
-        <div class="arch-frame">
-            <img src="IMG_6869.jpg" alt="Arch framed picture" class="arch-image">
-        </div>
-        <div class="arch-text">cupcakes</div>
-      </div>
-    
-      <div class="frame-item">
-        <div class="arch-frame">
-            <img src="IMG_6873.jpg" alt="Arch framed picture" class="arch-image">
-        </div>
-        <div class="arch-text">cookies</div>
-      </div>
-    
-      <div class="frame-item">
-        <div class="arch-frame">
-            <img src="IMG_6908.jpg" alt="Arch framed picture" class="arch-image">
-        </div>
-        <div class="arch-text">cakes</div>
-      </div>
+    <div class="frame-item">
+      <button class="arch-frame">
+        <img src="IMG_6873.jpg" alt="Arch framed picture" class="arch-image">
+      </button>
+      <div class="arch-text">cookies</div>
     </div>
-    <div class="bottom-circle">
-      Wholesome & Delightful Pastries
+    <div class="frame-item">
+      <button class="arch-frame">
+        <img src="IMG_6908.jpg" alt="Arch framed picture" class="arch-image">
+      </button>
+      <div class="arch-text">cakes</div>
     </div>
-    
+  </div>
+
+  <!-- Bottom Circle -->
+  <button class="bottom-circle">
+    Wholesome & Delightful Pastries
+  </button>
   
   <script>
     feather.replace();

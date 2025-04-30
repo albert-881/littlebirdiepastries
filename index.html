@@ -7,6 +7,10 @@
   <script src="https://unpkg.com/feather-icons"></script> <!-- Feather icons -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     /* Reset basic styles */
@@ -80,18 +84,18 @@
     }
 
     .top-section {
-  position: fixed;
-  top: 40px; /* Below the banner */
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 16px;
-  background-color: #FFF9ED; /* Match the body bg */
-  z-index: 1000;
-  
-}
+      position: fixed;
+      top: 40px; /* Below the banner */
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 16px;
+      background-color: #FFF9ED; /* Match the body bg */
+      z-index: 1000;
+      
+    }
 
 
     .hamburger-icon {
@@ -164,15 +168,15 @@
     }
 
     .awning {
-  margin-top: 190px; /* 40 (banner) + 90 (top-section) */
-  width: 800px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      margin-top: 190px; /* 40 (banner) + 90 (top-section) */
+      width: 800px;
+      height: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
 
     .awning img {
@@ -233,57 +237,52 @@
       animation-fill-mode: forwards;
     }
 /*/////////////////////////////////////////////////////
-decor section 1
+DECOR SECTION 1
 /////////////////////////////////////////////////////*/
-.decorPic1{
-  margin-top: 80px;
-  background-image: url('Order Now-5.png');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  width: 100vw;
-  position: relative;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  
-}
+    .decorPic1{
+      margin-top: 80px;
+      background-image: url('Order Now-5.png');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      width: 100vw;
+      position: relative;
+      color: white;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      
+    }
 
-.decorPic1 h1 {
-  margin-left: 80px;
-  margin-top: 40px;
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: white;
-  font-weight: bold;
-}
+    .decorPic1 h1 {
+      margin-left: 80px;
+      margin-top: 40px;
+      font-family: 'Playfair Display', serif;
+      font-size: 50px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: white;
+      font-weight: bold;
+    }
 
-.decorPic1 h1 .line {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 2px;
-  background-color: white;
-}
+    .decorPic1 h1 .line {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+      background-color: white;
+    }
 
-.decorPic1 h1 em {
-  font-style: italic;
-}
-
-
+    .decorPic1 h1 em {
+      font-style: italic;
+    }
 
 
-
-
-
-
-
-
-
+/*/////////////////////////////////////////////////////
+SLIDER
+/////////////////////////////////////////////////////*/
+    
 
 
     /* Mobile styles */
@@ -391,6 +390,7 @@ decor section 1
     Wholesome & Delightful Pastries
   </button>
   
+  <!-- ***********************************DECORPICTURE************************************** -->
   <div class="decorPic1">
     <h1>
       <span class="line"></span>
@@ -399,6 +399,36 @@ decor section 1
     </h1>
   </div>
   
+  
+<!-- SLIDER SECTION -->
+<div class="mt-20 w-screen h-[500px] bg-[#FBFDFF] flex flex-col items-center justify-evenly">
+  <div id="slidertitle" class="font-['Playfair_Display'] text-[50px] text-[#C89A77]">Birdie's Bests</div>
+
+  <!-- Make sure the carousel is horizontally scrollable on mobile -->
+  <div id="carousel" class="flex gap-4 overflow-x-auto px-6 sm:gap-6 snap-x snap-mandatory scroll-smooth">
+    <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
+      <img src="IMG_6869.jpg" alt="Slide 1" class="w-[250px] ">
+      <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Ferrero</div>
+    </div>
+    <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
+      <img src="IMG_6873.jpg" alt="Slide 2" class="w-[250px] ">
+      <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Cookies & Cream</div>
+    </div>
+    <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
+      <img src="IMG_6869.jpg" alt="Slide 3" class="w-[250px] ">
+      <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Chocolate Chip</div>
+    </div>
+    <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
+      <img src="IMG_6869.jpg" alt="Slide 4" class="w-[250px] ">
+      <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Chocolate Chip</div>
+    </div>
+    <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
+      <img src="IMG_6873.jpg" alt="Slide 5" class="w-[250px] ">
+      <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Chocolate Chip</div>
+    </div>
+  </div>
+</div>
+
   
   <script>
     feather.replace();

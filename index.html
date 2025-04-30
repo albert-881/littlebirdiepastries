@@ -87,7 +87,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  padding: 5px 16px;
   background-color: #FFF9ED; /* Match the body bg */
   z-index: 1000;
   
@@ -235,7 +235,44 @@
 /*/////////////////////////////////////////////////////
 decor section 1
 /////////////////////////////////////////////////////*/
+.decorPic1{
+  margin-top: 80px;
+  background-image: url('Order Now-5.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100vw;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+}
 
+.decorPic1 h1 {
+  margin-left: 80px;
+  margin-top: 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.decorPic1 h1 .line {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: white;
+}
+
+.decorPic1 h1 em {
+  font-style: italic;
+}
 
 
 
@@ -267,7 +304,18 @@ decor section 1
         height: 100px;
         letter-spacing: 1px;
       }
-
+      .decorPic1 h1 {
+        font-size: 28px;
+        margin-left: 10px;
+        gap: 10px;
+      }
+      .decorPic1 h1 .line {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+      }
       .logo img {
         width: 150px; /* Adjust logo size further for mobile */
       }
@@ -343,8 +391,15 @@ decor section 1
     Wholesome & Delightful Pastries
   </button>
   
-  <div class="decorPic" id="picture1">
+  <div class="decorPic1">
+    <h1>
+      <span class="line"></span>
+      <span>gourmet <em>goodness</em></span>
+      <span class="line"></span>
+    </h1>
   </div>
+  
+  
   <script>
     feather.replace();
   </script>

@@ -79,13 +79,20 @@
       font-weight: bold;
     }
 
-    /* Top Section */
     .top-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
+  position: fixed;
+  top: 40px; /* Below the banner */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #FFF9ED; /* Match the body bg */
+  z-index: 1000;
+  
+}
+
 
     .hamburger-icon {
       width: 100px;
@@ -156,15 +163,17 @@
       background-color: #D9A77B;
     }
 
-    /* Awning Section with Image */
     .awning {
-      width: 800px; /* Full width */
-      height: 200px; /* Default height for desktop */
-      margin: 0 auto; /* Center the awning horizontally */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  margin-top: 190px; /* 40 (banner) + 90 (top-section) */
+  width: 800px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
     .awning img {
       width: 100%; /* Make the image responsive and cover the div */
@@ -223,6 +232,22 @@
       animation-delay: 0.5s;
       animation-fill-mode: forwards;
     }
+/*/////////////////////////////////////////////////////
+decor section 1
+/////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* Mobile styles */
     @media (max-width: 768px) {
@@ -251,6 +276,7 @@
       .awning {
         width: 80%; /* Slightly smaller width on mobile */
         height: 200px; /* Adjust height for mobile screens */
+        margin-top: 130px;
       }
 
       .arch-frame {
@@ -317,6 +343,8 @@
     Wholesome & Delightful Pastries
   </button>
   
+  <div class="decorPic" id="picture1">
+  </div>
   <script>
     feather.replace();
   </script>

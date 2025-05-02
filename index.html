@@ -280,9 +280,133 @@ DECOR SECTION 1
 
 
 /*/////////////////////////////////////////////////////
-SLIDER
+SIGNATURE FAVORITE
 /////////////////////////////////////////////////////*/
-    
+/* Signature Favorite Section Styles */
+.signature-favorite-section {
+  background-color: #FBFDFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 80px;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 80px;
+}
+
+
+.title {
+  color: #E2B08B;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px; /* Adjust this to move the title down */
+
+}
+
+.text-box {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  background: url('Order%20Now-6.png') no-repeat center center / contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  position: relative;
+  
+}
+
+.signature-name {
+  color: #795F4C;
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  margin-left: 10px;
+  line-height: 1.4;
+  
+}
+
+.description {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-left: 10px;
+}
+
+.textboximagecontainer{
+  display: flex;
+  gap:20px;
+}
+
+.imagescontainer {
+  
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+img {
+  width: 200px;
+  display: block;
+}
+
+.image-stack::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.image-stack__item--top {
+  float: left;
+  width: 66%;
+  margin-right: -100%;
+  position: relative;
+  z-index: 1;
+}
+
+.image-stack__item--bottom {
+  float: right;
+  width: 75%;
+}
+
+@supports (display: grid) {
+  .image-stack {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .image-stack__item--bottom {
+  grid-column: 4 / -1; /* start farther right */
+  grid-row: 1;
+  width: 200%; /* makes it slightly larger */
+  transform: translateX(10%); /* push even more right */
+}
+
+
+  .image-stack__item--top {
+    grid-row: 1;
+    grid-column: 1/span 8;
+    padding-top: 20%;
+    width: 100%;
+  }
+
+}
+
+
+
+
+  
 
 
     /* Mobile styles */
@@ -319,24 +443,54 @@ SLIDER
         width: 150px; /* Adjust logo size further for mobile */
       }
 
-      /* Adjust Awning height for smaller screens */
+        /* Adjust Awning height for smaller screens */
       .awning {
-        width: 80%; /* Slightly smaller width on mobile */
-        height: 200px; /* Adjust height for mobile screens */
-        margin-top: 130px;
+          width: 80%; /* Slightly smaller width on mobile */
+          height: 200px; /* Adjust height for mobile screens */
+          margin-top: 130px;
       }
 
       .arch-frame {
-        width: 22vw;
-        height: 110px;
+          width: 22vw;
+          height: 110px;
       }
 
       .frame-container {
-        gap: 20px;
-        margin-top: 0 ;
+          gap: 20px;
+          margin-top: 0 ;
       }
-    }
 
+      .textboximagecontainer{
+          display: flex;
+          flex-direction: column;
+          gap:0px;
+      }
+      .text-box{
+        padding:0;
+      }
+      .image-stack__item--bottom {
+          grid-column: 4 / -1; /* start farther right */
+          grid-row: 1;
+          width: 200%; /* makes it slightly larger */
+          transform: translateX(10%); /* push even more right */
+      }
+      .signature-name {
+        margin-left: 40px;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        margin-left: 40px;
+        font-size: 13px;
+        width:270px;
+      }
+      .text-box {
+        width: 400px;
+      }
+      .content {
+      gap: 30px;
+    }
+  }
    
   </style>
 </head>
@@ -400,9 +554,9 @@ SLIDER
   </div>
   
   
-<!-- SLIDER SECTION -->
-<div class="mt-20 w-screen h-[500px] bg-[#FBFDFF] flex flex-col items-center justify-evenly">
-  <div id="slidertitle" class="font-['Playfair_Display'] text-[50px] text-[#C89A77]">Birdie's Bests</div>
+  <!-- ***********************************SLIDER************************************** -->
+<div class="mt-20 w-screen h-[600px] bg-[#FBFDFF] flex flex-col items-center justify-evenly">
+  <div id="slidertitle" class="font-['Playfair_Display'] text-[50px] text-[#E2B08B]">Birdie's Bests</div>
 
   <!-- Make sure the carousel is horizontally scrollable on mobile -->
   <div id="carousel" class="flex gap-4 overflow-x-auto px-6 sm:gap-6 snap-x snap-mandatory scroll-smooth">
@@ -429,7 +583,44 @@ SLIDER
   </div>
 </div>
 
-  
+
+<!-- Signature Favorite Section -->
+<div class="signature-favorite-section">
+  <div class="content">
+
+    <!-- Title: Signature Favorites -->
+    <h2 class="title">
+      Signature Favorites
+    </h2>
+    <div class="textboximagecontainer">
+    <!-- Text Box -->
+    <div class="text-box">
+      <h3 class="signature-name">
+        churro cookie
+      </h3>
+      <p class="description">
+        A delicate balance of tart raspberry and nutty pistachio, layered over a buttery crust. This seasonal treat is handmade with love and perfect for Mother’s Day.
+      </p>
+    </div>
+    <div class="imagescontainer">
+      <div class="image-stack">
+        <div class="image-stack__item image-stack__item--top">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/portrait1.jpeg" alt="">
+        </div>
+        <div class="image-stack__item image-stack__item--bottom">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg" alt="">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+
   <script>
     feather.replace();
   </script>

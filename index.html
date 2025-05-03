@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
+  
+  <script type="module" src="js/index.js" defer></script>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -241,7 +241,7 @@ DECOR SECTION 1
 /////////////////////////////////////////////////////*/
     .decorPic1{
       margin-top: 80px;
-      background-image: url('Order Now-5.png');
+      background-image: url('images/Order Now-5.png');
       background-size: cover;
       background-position: center;
       height: 500px;
@@ -316,7 +316,7 @@ SIGNATURE FAVORITE
   width: 100%;
   max-width: 600px;
   height: 400px;
-  background: url('Order%20Now-6.png') no-repeat center center / contain;
+  background: url('images/Order%20Now-6.png') no-repeat center center / contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -510,33 +510,33 @@ img {
   <div class="top-section">
     <div class="hamburger-icon" data-feather="menu"></div>
     <div class="logo">
-      <img src="Order Now-2.png" alt="">
+      <img src="images/Order Now-2.png" alt="">
     </div>
     <button class="circle">Order Now</button>
   </div>
 
   <!-- Awning Section with Image -->
   <div class="awning">
-    <img src="Order Now-4.png" alt="Order Now Image">
+    <img src="images/Order Now-4.png" alt="Order Now Image">
   </div>
   
   <!-- Frame Section -->
   <div class="frame-container">
     <div class="frame-item">
       <button class="arch-frame">
-        <img src="IMG_6869.jpg" alt="Arch framed picture" class="arch-image">
+        <img src="images/IMG_6869.jpg" alt="Arch framed picture" class="arch-image">
       </button>
       <div class="arch-text">cupcakes</div>
     </div>
     <div class="frame-item">
-      <button class="arch-frame">
-        <img src="IMG_6873.jpg" alt="Arch framed picture" class="arch-image">
+      <button class="arch-frame" id="cookie-btn">
+        <img src="images/IMG_6873.jpg" alt="Arch framed picture" class="arch-image">
       </button>
       <div class="arch-text">cookies</div>
     </div>
     <div class="frame-item">
       <button class="arch-frame">
-        <img src="IMG_6908.jpg" alt="Arch framed picture" class="arch-image">
+        <img src="images/IMG_6908.jpg" alt="Arch framed picture" class="arch-image">
       </button>
       <div class="arch-text">cakes</div>
     </div>
@@ -559,28 +559,28 @@ img {
   
   <!-- ***********************************SLIDER************************************** -->
 <div class="mt-20 w-screen h-[600px] bg-[#FBFDFF] flex flex-col items-center justify-evenly">
-  <div id="slidertitle" class="font-['Playfair_Display'] font-bold text-[50px] text-[#E2B08B]">Birdie's Bests</div>
+  <div id="slidertitle" class="font-['Playfair_Display'] text-[50px] text-[#E2B08B]">Birdie's Bests</div>
 
   <!-- Make sure the carousel is horizontally scrollable on mobile -->
   <div id="carousel" class="flex gap-4 overflow-x-auto px-6 sm:gap-6 snap-x snap-mandatory scroll-smooth">
     <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
-      <img src="IMG_6869.jpg" alt="Slide 1" class="w-[250px] ">
+      <img src="images/IMG_6869.jpg" alt="Slide 1" class="w-[250px] ">
       <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Ferrero</div>
     </div>
     <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
-      <img src="IMG_6873.jpg" alt="Slide 2" class="w-[250px] ">
+      <img src="images/IMG_6873.jpg" alt="Slide 2" class="w-[250px] ">
       <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Cookies & Cream</div>
     </div>
     <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
-      <img src="IMG_6869.jpg" alt="Slide 3" class="w-[250px] ">
+      <img src="images/IMG_6869.jpg" alt="Slide 3" class="w-[250px] ">
       <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Chocolate Chip</div>
     </div>
     <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
-      <img src="IMG_6869.jpg" alt="Slide 4" class="w-[250px] ">
+      <img src="images/IMG_6869.jpg" alt="Slide 4" class="w-[250px] ">
       <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Chocolate Chip</div>
     </div>
     <div class="flex-shrink-0 w-[60%] sm:w-[200px] flex flex-col items-center snap-center">
-      <img src="IMG_6873.jpg" alt="Slide 5" class="w-[250px] ">
+      <img src="images/IMG_6873.jpg" alt="Slide 5" class="w-[250px] ">
       <div class="font-['Playfair_Display'] font-light text-[#795F4C] text-lg mt-2">Chocolate Chip</div>
     </div>
   </div>

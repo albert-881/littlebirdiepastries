@@ -8,9 +8,10 @@ body{
     text-align: center;
     margin-top: 50px; /* Adjust this to move the title down */
     font-weight: bold;
+    background-color: #f4e4ca;
   }
   
-.cookie-container {
+.cookie-container, .cupcakes-container, .cakes-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -41,7 +42,7 @@ body{
     display: block;
   }
   
-  .cookie-title {
+  .cookie-title, .cupcake-title, .cake-title {
     padding: 1rem 0;
     font-weight: bold;
     font-size: 1.2rem;
@@ -49,7 +50,7 @@ body{
     font-family: 'Playfair Display', serif;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .card{
         width: 90vw;
     }

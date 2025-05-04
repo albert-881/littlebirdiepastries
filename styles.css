@@ -51,14 +51,20 @@ body{
   }
 
   @media (max-width: 600px) {
+
+    .cookie-container, .cupcakes-container, .cakes-container {
+        padding: 0;
+        padding-top: 40px;
+        justify-content: space-between;
+      }
     .card{
-        width: 90vw;
+        width: 45vw;
     }
 
     .card img{
-        height: 300px;
+        height: 200px;
     }
-    .cookie-title{
+    .cookie-title, .cupcake-title, .cake-title{
         font-size: 2rem;
     }
     

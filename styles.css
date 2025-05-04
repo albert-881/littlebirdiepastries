@@ -44,7 +44,7 @@ body{
   
   .cookie-title, .cupcake-title, .cake-title {
     padding: 1rem 0;
-    font-weight: bold;
+    
     font-size: 1.2rem;
     color: #795F4C;
     font-family: 'Playfair Display', serif;
@@ -55,17 +55,17 @@ body{
     .cookie-container, .cupcakes-container, .cakes-container {
         padding: 0;
         padding-top: 40px;
-        justify-content: space-between;
+        justify-content: center;
       }
     .card{
-        width: 45vw;
+        width: 40vw;
     }
 
     .card img{
         height: 200px;
     }
     .cookie-title, .cupcake-title, .cake-title{
-        font-size: 2rem;
+        font-size: 20px;
     }
     
   }

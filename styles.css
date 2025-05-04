@@ -84,35 +84,35 @@ body{
     font-family: 'Playfair Display', serif;
   }
 
- /* General popup background (not covering the whole screen) */
-.popup {
+  .popup {
     position: fixed;
-    top: 25%;
+    top: 0;
     right: 0;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.3);  /* Dim the background but allow clicks */
-    width: 300px;  /* Width of the sidebar */
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    max-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    opacity: 1;
-    visibility:hidden;
-    transition: visibility 0.3s ease, opacity 0.3s ease;
-    border-radius: 20px;
+    overflow: hidden; /* Important: only popup-content scrolls */
+    border-radius: 15px;
+    visibility: hidden;
   }
+  
+  .popup-content {
+    background-color: #f4e4ca;
+    padding: 20px;
+    max-height: 50vh;       /* Keep content within screen height */
+    overflow-y: auto;        /* Scroll appears only when needed */
+    box-sizing: border-box;
+    border-radius: 8px 0 0 8px;
+  }
+  
 
   .popup.show {
     visibility: visible;
     opacity: 1;
   }
   
-  /* Popup content box */
-  .popup-content {
-    background-color: #f4e4ca;
-    padding: 20px;
-    height: 100%;
-    overflow-y: auto;
-    border-radius: 8px 0 0 8px;  /* Rounded corners on the left side */
-  }
+  
   
   /* Title styling */
   .popup-content h3 {

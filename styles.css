@@ -18,7 +18,14 @@ body{
     font-size: 20px;
     cursor: pointer;
     z-index: 1;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
   }
+  
   
   .plus-btn:hover {
     background-color: #795F4C;

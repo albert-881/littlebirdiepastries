@@ -12,9 +12,9 @@ body{
     background-color: #f4e4ca;
     color: #795F4C;
     border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    
+    width: 30px;
+    height: 30px;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Arial', sans-serif; /* Helps with consistent rendering */

@@ -44,7 +44,14 @@ body{
     
     background-color: #ffe0ca;
   }
-  
+  .pricing{
+    display: flex;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    color: #795F4C;
+    font-size: 20px;
+    text-align: center;
+  }
 .cookie-container, .cupcakes-container, .cakes-container {
     display: flex;
     flex-wrap: wrap;
@@ -187,7 +194,7 @@ body{
   /* Title styling */
   .popup-content h3 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #795F4C;
     font-family: 'Playfair Display', serif;
     
@@ -285,10 +292,10 @@ body{
   }
   
   .total-section {
-    margin-top: 50px;
+  
     position: sticky;
     bottom: 0; /* Fixed at the bottom of the popup */
-    
+    font-family: 'Playfair Display', serif;
    
     width: 100%;
   }

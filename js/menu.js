@@ -1,4 +1,16 @@
 const prices = {
+  "Cookie: Oreo": 3.00,
+  "Cookie: Churro": 3.00,
+  "Cookie: Kinder Bueno": 3.00,
+  "Cookie: Chocolate Chip": 3.00,
+  "Cookie: Ferrero Rocher": 3.00,
+  "Cookie: Reese's Peanut Butter": 3.00,
+  "Cookie: Macadamia Nut": 3.00,
+  "Cookie: Biscoff Lotus": 3.00,
+  "Cookie: Banana Nut": 3.00,
+  "Cookie: Snickers": 3.00,
+  "Cookie: Nutella": 3.00,
+  "Cookie: M&M": 3.00,
   "Cupcake: Banana": 3.00,
   "Cupcake: Pumpkin": 3.20,
   "Cupcake: Blueberry": 3.10,
@@ -20,13 +32,30 @@ const totalPriceElement = document.getElementById('total-price');
 // Object to store the quantities of items
 let cart = {};
 
-// Function to update the total price
+// Function to update the total price with special pricing rules
 function updateTotalPrice() {
   let total = 0;
-  // Loop through the cart and calculate total
+  let cookieCupcakeCount = 0;
+
+  // First count the number of cookies and cupcakes
   for (let item in cart) {
-    total += prices[item] * cart[item];
+    if (item.startsWith("Cookie") || item.startsWith("Cupcake")) {
+      cookieCupcakeCount += cart[item];
+    }
   }
+
+  const specialPrice = cookieCupcakeCount >= 6 ? 3.00 : 4.00;
+
+  // Now calculate the total
+  for (let item in cart) {
+    const quantity = cart[item];
+    if (item.startsWith("Cookie") || item.startsWith("Cupcake")) {
+      total += specialPrice * quantity;
+    } else {
+      total += prices[item] * quantity;
+    }
+  }
+
   // Update the total price in the popup
   totalPriceElement.innerText = total.toFixed(2);
 }

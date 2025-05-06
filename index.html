@@ -122,7 +122,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Bodoni Moda', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.2rem; /* relative to screen size */
       color: #795F4C;
       text-align: center;
@@ -140,32 +140,7 @@
       background-color: #D9A77B;
     }
 
-    .bottom-circle {
-      margin-top: 40px; /* space from frames */
-      width: 60vw;
-      height: 150px;
-      background-color: #Efe8b8;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Bodoni Moda', serif;
-      font-size: 2rem;
-      color: #795F4C;
-      text-align: center;
-      padding: 5px;
-      overflow: hidden;
-      white-space: nowrap;
-      letter-spacing: 2px;
-      animation: popIn 1s ease forwards;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .bottom-circle:hover {
-      transform: scale(1.1);
-      background-color: #D9A77B;
-    }
+    
 
     .awning {
       margin-top: 190px; /* 40 (banner) + 90 (top-section) */
@@ -406,9 +381,6 @@ img {
 
 
 
-  
-
-
     /* Mobile styles */
     @media (max-width: 768px) {
       .hamburger-icon {
@@ -422,9 +394,9 @@ img {
       }
   
       .bottom-circle {
-        width: 80vw;
+        width: 100vw;
         font-size: 1.0rem;
-        height: 100px;
+        height: 70px;
         letter-spacing: 1px;
       }
       .decorPic1 h1 {
@@ -542,11 +514,15 @@ img {
     </div>
   </div>
 
-  <!-- Bottom Circle -->
-  <button class="bottom-circle">
-    Wholesome & Delightful Pastries
-  </button>
-  
+<!-- Bottom Circle -->
+<div class="relative overflow-hidden bg-[#Efe8b8] py-4 mt-[20px] w-full">
+  <div class="text-[#795F4C] text-lg font-semibold tracking-wider text-center">
+    <span class="inline-block">Wholesome & Delightful Pastries</span>
+  </div>
+</div>
+
+
+
   <!-- ***********************************DECORPICTURE************************************** -->
   <div class="decorPic1">
     <h1>

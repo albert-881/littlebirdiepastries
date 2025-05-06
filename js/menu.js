@@ -29,3 +29,10 @@ plusBtns.forEach(btn => {
 popupClose.addEventListener('click', () => {
   popup.classList.remove('show');
 });
+
+
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});

@@ -9,7 +9,7 @@ body{
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #f4e4ca;
+    background-color: #ffe0ca;
     color: #795F4C;
     border: none;
     
@@ -41,8 +41,8 @@ body{
     font-size: 50px;
     text-align: center;
     margin-top: 50px; /* Adjust this to move the title down */
-    font-weight: bold;
-    background-color: #f4e4ca;
+    
+    background-color: #ffe0ca;
   }
   
 .cookie-container, .cupcakes-container, .cakes-container {
@@ -55,7 +55,7 @@ body{
   }
   
   .card {
-    background-color: #f4e4ca;
+    background-color: #ffe0ca;
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -64,12 +64,15 @@ body{
     transition: transform 0.2s ease;
     border: 2px solid #f4e4ca;
     
+  
+  height: 240px; /* Match flip-card */
   }
   
   .flip-card {
     background-color: transparent;
-    width: 200px;
     
+    width: 200px;
+  height: 240px; /* Match your .card height or desired height */
     perspective: 1000px;
   }
   
@@ -92,7 +95,7 @@ body{
     height: 100%;
     backface-visibility: hidden;
     
-    background-color: #f4e4ca;
+    background-color: #ffe0ca;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
   }
@@ -114,18 +117,20 @@ body{
     font-size: 18px;
     margin-bottom: 10px;
     color: #795F4C;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     margin-left: 30px;
   }
   
   .ingredient-list {
     list-style: disc;
     padding-left: 20px;
-    text-align: left;
+    text-align: center;
     color: #5a4435;
     font-size: 14px;
-    margin-left: 20px;
-    font-family: 'Playfair Display', serif;
+    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
+    list-style-type: none;
+    
   }
   
   .card:hover {
@@ -298,6 +303,11 @@ body{
     .cookie-title, .cupcake-title, .cake-title{
         font-size: 20px;
     }
-    
+    .flip-card{
+      height: 270px;
+    }
+    .card{
+      height: 270px;
+    }
   
   }

@@ -211,7 +211,7 @@ body{
     border-radius: 6px;
     color: #795F4C;
     font-family: 'Playfair Display', serif;
-    
+    height: 55px;
        
       
   }
@@ -247,7 +247,7 @@ body{
     cursor: pointer;
     transition: background-color 0.3s;
     
-    margin-top: 20px;
+    margin-top: 45px;
   }
   
   .checkoutbtn:hover {
@@ -256,7 +256,7 @@ body{
   
   /* Close button styling */
   .popup-content button {
-    margin-top: 20px;
+    margin-top: 45px;
     background-color: #795F4C;
     font-family: 'Playfair Display', serif;
     color: #fff;
@@ -277,13 +277,21 @@ body{
     margin-left: 8px !important;
     padding: 0 !important;
     line-height: 1 !important;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .remove-btn:hover {
     color: #d00 !important;
   }
   
+  .total-section {
+    margin-top: 50px;
+    position: sticky;
+    bottom: 0; /* Fixed at the bottom of the popup */
+    
+   
+    width: 100%;
+  }
   
 
   @media (max-width: 600px) {

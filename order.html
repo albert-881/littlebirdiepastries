@@ -4,18 +4,88 @@
   <meta charset="UTF-8">
   <title>Complete Your Order</title>
   <script type="module" src="js/menuUI.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
-    h2 { margin-bottom: 10px; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 5px; }
-    label { display: block; margin-top: 15px; }
-    input, button { width: 100%; padding: 8px; margin-top: 5px; }
-    button { background-color: black; color: white; border: none; cursor: pointer; }
+    body {
+      font-family: 'Playfair Display', serif;
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #fffaf6;
+      color: #3e3e3e;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #302e2e;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #fff;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #d4a373;
+      box-shadow: 0 0 0 1px #d4a373;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 30px;
+      background-color: #795F4C;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e1e1e;
+    }
+
+    #order-summary{
+    
+    background-color: #ffe0ca;
+    }
   </style>
 </head>
 <body>
   <h2>Review Your Order</h2>
+
   <form id="order-form">
     <ul id="order-summary">
       <!-- Items will be dynamically inserted here -->
@@ -33,23 +103,5 @@
     <button type="submit">Submit Order</button>
   </form>
 
-  <script>
-    // Assuming cart is stored in localStorage as JSON string
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    const orderList = document.getElementById('order-summary');
-
-    for (let item in cart) {
-      const li = document.createElement('li');
-      li.textContent = `${item} — Qty: ${cart[item]}`;
-      orderList.appendChild(li);
-    }
-
-    // Example submit handler
-    document.getElementById('order-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      // You can send the order to your backend here
-      alert('Order submitted! Thank you.');
-    });
-  </script>
 </body>
 </html>

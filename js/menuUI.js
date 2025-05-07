@@ -4,6 +4,9 @@
  const orderList = document.getElementById('order-summary');
  orderList.innerHTML = '';
  // Populate order list
+
+ console.log(cart);
+ console.log(totalPrice);
  for (let item in cart) {
    const li = document.createElement('li');
    li.textContent = `${item} — Qty: ${cart[item]}`;

@@ -84,17 +84,27 @@ plusBtns.forEach(btn => {
       `;
       summaryList.appendChild(li);
 
-      // Add event listener for quantity input
-      li.querySelector('.quantity-input').addEventListener('input', (e) => {
-        const quantity = parseInt(e.target.value);
-        if (quantity > 0) {
-          cart[itemName] = quantity; // Update the quantity in the cart
-        } else {
-          delete cart[itemName]; // Remove item if quantity is zero or negative
-          li.remove(); // Remove from the list
-        }
-        updateTotalPrice(); // Update total price
-      });
+      const inputEl = li.querySelector('.quantity-input');
+
+// Update quantity as user types (but don’t remove yet)
+inputEl.addEventListener('input', (e) => {
+  const quantity = parseInt(e.target.value);
+  if (!isNaN(quantity) && quantity > 0) {
+    cart[itemName] = quantity;
+    updateTotalPrice();
+  }
+});
+
+// Only remove if invalid after user leaves the input
+inputEl.addEventListener('blur', (e) => {
+  const quantity = parseInt(e.target.value);
+  if (isNaN(quantity) || quantity <= 0) {
+    delete cart[itemName];
+    li.remove();
+    updateTotalPrice();
+  }
+});
+
 
       // Add event listener for remove button
       li.querySelector('.remove-btn').addEventListener('click', () => {

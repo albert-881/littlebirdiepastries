@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete Your Order</title>
+  <script type="module" src="js/menuUI.js" defer></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    h2 { margin-bottom: 10px; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 5px; }
+    label { display: block; margin-top: 15px; }
+    input, button { width: 100%; padding: 8px; margin-top: 5px; }
+    button { background-color: black; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Review Your Order</h2>
+  <form id="order-form">
+    <ul id="order-summary">
+      <!-- Items will be dynamically inserted here -->
+    </ul>
+
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="pickupDate">When do you need the cookies?</label>
+    <input type="date" id="pickupDate" name="pickupDate" required>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+  <script>
+    // Assuming cart is stored in localStorage as JSON string
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const orderList = document.getElementById('order-summary');
+
+    for (let item in cart) {
+      const li = document.createElement('li');
+      li.textContent = `${item} — Qty: ${cart[item]}`;
+      orderList.appendChild(li);
+    }
+
+    // Example submit handler
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // You can send the order to your backend here
+      alert('Order submitted! Thank you.');
+    });
+  </script>
+</body>
+</html>

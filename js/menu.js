@@ -28,7 +28,7 @@ const popupClose = document.querySelector('.closebtn');
 const popup = document.querySelector('.popup');
 const summaryList = document.getElementById('summary-list');
 const totalPriceElement = document.getElementById('total-price');
-
+const checkoutButton = document.querySelector('.checkoutbtn');
 // Object to store the quantities of items
 let cart = {};
 
@@ -122,4 +122,17 @@ document.querySelectorAll('.flip-card').forEach(card => {
   card.addEventListener('click', () => {
     card.classList.toggle('flipped');
   });
+});
+
+checkoutButton.addEventListener('click', (e) => {
+  console.log('youre going to another page');
+  // Save cart to localStorage
+  localStorage.removeItem('cart');
+localStorage.removeItem('totalPrice');
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  
+  // Optionally, you can also store the calculated total
+  localStorage.setItem('totalPrice', totalPriceElement.innerText);
+  window.location.href = "order.html";
 });

@@ -15,6 +15,75 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
+
+/* Style for the hamburger menu */
+#nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px; /* Smaller width for the menu */
+    background-color: #795F4C; /* Dark brown background to match your color scheme */
+    display: none; /* Initially hidden */
+    z-index: 9999;
+    padding-top: 50px; /* Adjust the position of the menu */
+  }
+  
+  #nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #nav-menu ul li {
+    padding: 15px 0;
+    text-align: center; /* Center the text */
+  }
+  
+  #nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Smaller font size */
+    font-weight: 500;
+    letter-spacing: 1px; /* Slightly spaced out letters */
+    transition: color 0.3s ease;
+  }
+  
+  #nav-menu ul li a:hover {
+    color: #E2B08B; /* Lighter beige color for hover */
+  }
+  
+  /* Optional: style for the hamburger icon */
+  .hamburger-icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: #795F4C; /* Dark brown icon color */
+  }
+  
+  /* Toggle visibility of the menu */
+  .hidden {
+    display: none;
+  }
+  
+  #nav-menu.visible {
+    display: block; /* Makes the nav menu visible */
+  }
+  /* Style for the close button (Arrow) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover {
+    color: #E2B08B; /* Light beige on hover */
+  }
+  
+  
   /* Remove borders and other default styles from buttons */
   button {
     border: none;

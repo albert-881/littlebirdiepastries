@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="indexstyles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-  
+    <script src="js/index.js" type="module" defer></script>
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
@@ -24,14 +24,26 @@
     </div>
   </div>
 
-  <!-- Top Section (Hamburger + Circle) -->
-  <div class="top-section">
-    <div class="hamburger-icon" data-feather="menu"></div>
-    <div class="logo">
-      <img src="images/Order Now-2.png" alt="">
-    </div>
-    <button class="circle">Order Now</button>
+<!-- Top Section (Hamburger + Circle) -->
+<div class="top-section">
+  <div class="hamburger-icon" data-feather="menu" id="hamburger-icon"></div>
+  <div class="logo">
+    <img src="images/Order Now-2.png" alt="">
   </div>
+  <button class="circle">Order Now</button>
+</div>
+
+<!-- Navigation Menu (Initially hidden) -->
+<nav id="nav-menu" class="hidden bg-black text-white p-4 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+  <div class="close-btn" id="close-btn">&larr;</div> <!-- Left arrow close button -->
+  <ul>
+    <li><a href="#home" class="text-2xl py-4">Home</a></li>
+    <li><a href="#about" class="text-2xl py-4">About</a></li>
+    <li><a href="#services" class="text-2xl py-4">Services</a></li>
+    <li><a href="#contact" class="text-2xl py-4">Contact</a></li>
+  </ul>
+</nav>
+
 
   <!-- Awning Section with Image -->
   <div class="awning">

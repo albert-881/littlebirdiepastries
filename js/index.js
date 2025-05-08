@@ -1,7 +1,7 @@
 const cookiebutton = document.querySelector('#cookie-btn');
 const cupcakebutton = document.querySelector('#cupcake-btn');
 const cakebutton = document.querySelector('#cake-btn');
-
+const orderbutton = document.querySelector('.circle');
 cookiebutton.addEventListener('click', (e) => {
     console.log('works');
     window.location.href = 'Menu.html';
@@ -17,7 +17,9 @@ cakebutton.addEventListener('click', (e) => {
     window.location.href = 'Menu.html#cake-section';
 });
 
-
+orderbutton.addEventListener('click', (e) => {
+    window.location.href = 'Menu.html';
+});
 
 // Initialize Feather icons
 feather.replace();

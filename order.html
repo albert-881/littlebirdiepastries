@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- IMPORTANT -->
   <title>Complete Your Order</title>
   <script type="module" src="js/menuUI.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -9,12 +10,18 @@
     body {
       font-family: 'Playfair Display', serif;
       padding: 40px 20px;
-      max-width: 600px;
-      margin: auto;
+      margin: 0;
       background-color: #fffaf6;
       color: #3e3e3e;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
     }
 
     h2 {
@@ -77,33 +84,39 @@
       background-color: #1e1e1e;
     }
 
-    #order-summary{
-    
-    background-color: #ffe0ca;
+    #order-summary {
+      background-color: #ffe0ca;
+      padding: 16px;
+      border-radius: 8px;
     }
 
-   
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h2>Review Your Order</h2>
+  <div class="container">
+    <h2>Review Your Order</h2>
 
-  <form id="order-form">
-    <ul id="order-summary">
-      <!-- Items will be dynamically inserted here -->
-    </ul>
+    <form id="order-form">
+      <ul id="order-summary">
+        <!-- Items will be dynamically inserted here -->
+      </ul>
 
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
 
-    <label for="pickupDate">When do you need the cookies?</label>
-    <input type="date" id="pickupDate" name="pickupDate" required>
+      <label for="pickupDate">When do you need the cookies?</label>
+      <input type="date" id="pickupDate" name="pickupDate" required>
 
-    <button type="submit">Submit Order</button>
-  </form>
-
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
 </body>
 </html>

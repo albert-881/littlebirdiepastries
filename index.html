@@ -1,477 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Responsive Website</title>
-  <script src="https://unpkg.com/feather-icons"></script> <!-- Feather icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Website</title>
+    <script src="https://unpkg.com/feather-icons"></script> <!-- Feather icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="indexstyles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
   
-  <script type="module" src="js/index.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    /* Reset basic styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Playfair Display', serif;
-      background-color: #FFF9ED;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    /* Remove borders and other default styles from buttons */
-    button {
-      border: none;
-      outline: none;
-      background: transparent;
-      padding: 0;
-    }
-
-    /* Optional: Add hover effect or other styles */
-    button:hover {
-      background-color: #E2B08B; /* Example hover effect */
-      color: #fff;
-    }
-
-    /* Banner */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-60px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(1.1); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes zoomIn {
-      0% { transform: scale(1.3); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(70px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    .banner {
-      width: 100%;
-      height: 40px;
-      background-color: #E2B08B;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 16px;
-      animation: fadeIn 1s ease-out forwards;
-    }
-
-    .banner-text {
-      color: white;
-      font-size: 15px;
-      font-weight: bold;
-    }
-
-    .top-section {
-      position: fixed;
-      top: 40px; /* Below the banner */
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px 16px;
-      background-color: #FFF9ED; /* Match the body bg */
-      z-index: 1000;
-      
-    }
-
-
-    .hamburger-icon {
-      width: 100px;
-      height: 40px;
-      color: #E2B08B;
-      transition: transform 0.3s ease;
-    }
-
-    .hamburger-icon:hover {
-      transform: scale(1.2);
-    }
-
-    .logo img {
-      width: 150px;  /* Adjust logo size for mobile */
-      height: auto;
-    }
-
-    .circle {
-      width: 120px;
-      height: 50px;
-      background-color: #Efe8b8;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem; /* relative to screen size */
-      color: #795F4C;
-      text-align: center;
-      padding: 5px;
-      overflow: hidden;
-      white-space: nowrap; /* prevents wrapping */
-      animation: popIn 1s ease forwards;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-      margin-right: 10px;
-    }
-
-    .circle:hover {
-      transform: scale(1.1);
-      background-color: #D9A77B;
-    }
-
-    
-
-    .awning {
-      margin-top: 190px; /* 40 (banner) + 90 (top-section) */
-      width: 800px;
-      height: 200px;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-
-    .awning img {
-      width: 100%; /* Make the image responsive and cover the div */
-      height: auto; /* Maintain aspect ratio */
-      object-fit: cover; /* Ensure the image covers the div without distortion */
-      animation: zoomIn 1.5s ease forwards;
-    }
-
-    .arch-frame {
-      width: 150px;
-      height: 160px;
-      background-color: #fff;
-      border-radius: 50% 50% 0 0;
-      overflow: hidden;
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: floatUp 1.5s ease forwards;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .arch-frame:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .arch-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .frame-container {
-      display: flex;
-      margin-top: 50px;
-      gap: 60px;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    .frame-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .arch-text {
-      margin-top: 10px;
-      font-size: 1.5rem;
-      
-      
-      color: #795F4C;
-      font-family: 'Dancing Script', cursive;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 0.5s;
-      animation-fill-mode: forwards;
-      
-    }
-/*/////////////////////////////////////////////////////
-DECOR SECTION 1
-/////////////////////////////////////////////////////*/
-    .decorPic1{
-      margin-top: 80px;
-      background-image: url('images/Order Now-5.png');
-      background-size: cover;
-      background-position: center;
-      height: 500px;
-      width: 100%;
-      position: relative;
-      color: white;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      
-    }
-
-    .decorPic1 h1 {
-      margin-left: 80px;
-      margin-top: 40px;
-      font-family: 'Playfair Display', serif;
-      font-size: 50px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      color: white;
-      font-weight: bold;
-    }
-
-    .decorPic1 h1 .line {
-      content: "";
-      display: block;
-      width: 100px;
-      height: 2px;
-      background-color: white;
-    }
-
-    .decorPic1 h1 em {
-      font-style: italic;
-    }
-
-
-/*/////////////////////////////////////////////////////
-SIGNATURE FAVORITE
-/////////////////////////////////////////////////////*/
-/* Signature Favorite Section Styles */
-.signature-favorite-section {
-  background-color: #FBFDFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin-top: 80px;
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  </head>
   
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 30px;
-}
-
-
-.title {
-  color: #E2B08B;
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
-  text-align: center;
-  margin-top: 50px; /* Adjust this to move the title down */
-  font-weight: bold;
-}
-
-.text-box {
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  background: url('images/Order%20Now-6.png') no-repeat center center / contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  padding: 20px;
-  position: relative;
-  
-}
-
-.signature-name {
-  color: #795F4C;
-  font-family: 'Dancing Script', cursive;
-  font-size: 50px;
-  margin-left: 10px;
-  line-height: 1.4;
-  
-}
-
-.description {
-  color: black;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-left: 10px;
-}
-
-.textboximagecontainer{
-  display: flex;
-  gap:20px;
-}
-
-.imagescontainer {
-  
-  width: 100%;
-  margin: 0 auto;
-  max-width: 900px;
-}
-
-img {
-  width: 200px;
-  display: block;
-}
-
-.image-stack::after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.image-stack__item--top {
-  float: left;
-  width: 66%;
-  margin-right: -100%;
-  position: relative;
-  z-index: 1;
-}
-
-.image-stack__item--bottom {
-  float: right;
-  width: 75%;
-}
-
-@supports (display: grid) {
-  .image-stack {
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .image-stack__item--bottom {
-  grid-column: 4 / -1; /* start farther right */
-  grid-row: 1;
-  width: 200%; /* makes it slightly larger */
-  transform: translateX(10%); /* push even more right */
-}
-
-
-  .image-stack__item--top {
-    grid-row: 1;
-    grid-column: 1/span 8;
-    padding-top: 20%;
-    width: 100%;
-  }
-
-}
-
-
-
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .hamburger-icon {
-        margin-bottom: 10px;
-      }
-
-      .circle {
-        width: 100px;
-        height: 40px;
-        font-size: 1rem;
-      }
-  
-      .bottom-circle {
-        width: 100vw;
-        font-size: 1.0rem;
-        height: 70px;
-        letter-spacing: 1px;
-      }
-      .decorPic1 h1 {
-        font-size: 28px;
-        margin-left: 10px;
-        gap: 10px;
-      }
-      .decorPic1 h1 .line {
-        content: "";
-        display: block;
-        width: 30px;
-        height: 2px;
-        background-color: white;
-      }
-      .logo img {
-        width: 150px; /* Adjust logo size further for mobile */
-      }
-
-        /* Adjust Awning height for smaller screens */
-      .awning {
-          width: 80%; /* Slightly smaller width on mobile */
-          height: 200px; /* Adjust height for mobile screens */
-          margin-top: 130px;
-      }
-
-      .arch-frame {
-          width: 22vw;
-          height: 110px;
-      }
-
-      .frame-container {
-          gap: 20px;
-          margin-top: 0 ;
-      }
-
-      .imagescontainer{
-        margin-left: 30px;
-        padding-bottom: 30px;
-      }
-      .textboximagecontainer{
-          display: flex;
-          flex-direction: column;
-          gap:0px;
-      }
-      .text-box{
-        padding:0;
-      }
-      .image-stack__item--bottom {
-          grid-column: 4 / -1; /* start farther right */
-          grid-row: 1;
-          width: 200%; /* makes it slightly larger */
-          transform: translateX(10%); /* push even more right */
-      }
-      .signature-name {
-        margin-left: 40px;
-        margin-bottom: 20px;
-      }
-
-      .description {
-        margin-left: 40px;
-        font-size: 13px;
-        width:270px;
-      }
-      .text-box {
-        width: 400px;
-      }
-      .content {
-      gap: 0px;
-    }
-  }
-   
-  </style>
-</head>
 <body>
 
   <!-- Banner -->
@@ -526,14 +69,17 @@ img {
 
 
 
-  <!-- ***********************************DECORPICTURE************************************** -->
-  <div class="decorPic1">
-    <h1>
-      <span class="line"></span>
-      <span>gourmet <em>goodness</em></span>
-      <span class="line"></span>
-    </h1>
-  </div>
+<!-- ***********************************DECORPICTURE ************************************** -->
+<div class="decorPic1" data-aos="fade-up">
+  <h1 class="flex items-center justify-center space-x-0">
+    <span data-aos="fade-up" data-aos-delay="200" class="line"></span>
+    <span data-aos="fade-up" data-aos-delay="200" class="inline-block">gourmet</span>
+    <span data-aos="fade-up" data-aos-delay="400" class="inline-block"><em>goodness</em></span>
+    <span data-aos="fade-up" data-aos-delay="400" class="line"></span>
+  </h1>
+  
+</div>
+
   
   
   <!-- ***********************************SLIDER************************************** -->
@@ -624,10 +170,24 @@ img {
 
 
 
+<body>
 
+  <!-- Your content goes here -->
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!-- AOS JS -->
   <script>
     feather.replace();
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 1000,  // Duration of the animation
+        easing: 'ease-in-out',
+        once: true,  // Animation happens once
+      });
+    });
   </script>
+
+</body>
+
 
 </body>
 </html>

@@ -187,8 +187,8 @@
     color: #795F4C;
     text-align: center;
     padding: 5px;
-    overflow: hidden;
-    white-space: nowrap; /* prevents wrapping */
+    
+    
     animation: popIn 1s ease forwards;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;

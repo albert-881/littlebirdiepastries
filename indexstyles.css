@@ -219,7 +219,7 @@
   .awning {
     margin-top: 190px; /* 40 (banner) + 90 (top-section) */
     width: 800px;
-    height: 200px;
+    height: 260px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -369,7 +369,7 @@ font-weight: bold;
 .text-box {
 width: 100%;
 max-width: 600px;
-height: 400px;
+height: 600px;
 background: url('images/Order%20Now-6.png') no-repeat center center / contain;
 display: flex;
 flex-direction: column;

@@ -338,7 +338,7 @@ SIGNATURE FAVORITE
 /////////////////////////////////////////////////////*/
 /* Signature Favorite Section Styles */
 .signature-favorite-section {
-background-color: #FBFDFF;
+background-color: #FAF9F6;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -411,7 +411,7 @@ max-width: 900px;
 }
 
 img {
-width: 200px;
+width: 250px;
 display: block;
 }
 
@@ -513,7 +513,7 @@ transform: translateX(10%); /* push even more right */
     }
 
     .imagescontainer{
-      margin-left: 30px;
+      margin-left: 20px;
       padding-bottom: 30px;
       margin-top: 0;
       

@@ -399,13 +399,14 @@ margin-left: 10px;
 
 .textboximagecontainer{
 display: flex;
-gap:20px;
+gap:50px;
+margin-left: 150px;
 }
 
 .imagescontainer {
 
 width: 100%;
-margin: 0 auto;
+margin-top: 100px;
 max-width: 900px;
 }
 
@@ -441,7 +442,7 @@ width: 75%;
 }
 
 .image-stack__item--bottom {
-grid-column: 4 / -1; /* start farther right */
+grid-column: 4 / -7; /* start farther right */
 grid-row: 1;
 width: 200%; /* makes it slightly larger */
 transform: translateX(10%); /* push even more right */
@@ -514,11 +515,14 @@ transform: translateX(10%); /* push even more right */
     .imagescontainer{
       margin-left: 30px;
       padding-bottom: 30px;
+      margin-top: 0;
+      
     }
     .textboximagecontainer{
         display: flex;
         flex-direction: column;
         gap:0px;
+        margin-left: 0;
     }
     .text-box{
       padding:0;
